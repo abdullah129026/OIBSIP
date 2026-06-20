@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Essence — Clarity in Every Detail</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- ======================== HEADER / NAV ======================== -->
+  <header class="header" id="top">
+    <div class="container header-inner">
+      <a href="#top" class="brand" aria-label="Essence home">
+        <span class="brand-mark">E</span>
+        <span class="brand-name">Essence</span>
+      </a>
+      <nav class="nav" aria-label="Primary navigation">
+        <button class="nav-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+        <ul class="nav-list" role="list">
+          <li><a href="#features" class="nav-link">Features</a></li>
+          <li><a href="#services" class="nav-link">Services</a></li>
+          <li><a href="#about" class="nav-link">About</a></li>
+          <li><a href="#resources" class="nav-link">Resources</a></li>
+          <li><a href="#pricing" class="nav-link">Pricing</a></li>
+          <li><a href="#contact" class="nav-link nav-link--cta">Get Started</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ======================== HERO ======================== -->
+  <section class="hero" id="hero">
+    <div class="container hero-inner">
+      <div class="hero-content">
+        <p class="hero-tag">Design System · v2.0</p>
+        <h1 class="hero-title">Clarity in<br /><span class="text-accent">Every Detail</span></h1>
+        <p class="hero-description">
+          Essence is a purpose-built design system that brings consistency,
+          accessibility, and speed to every interface your team ships.
+        </p>
+        <div class="hero-actions">
+          <a href="#contact" class="btn btn-primary">Start Building</a>
+          <a href="#features" class="btn btn-ghost">Explore Features</a>
+        </div>
+        <ul class="hero-stats" role="list">
+          <li>
+            <span class="stat-value">120+</span>
+            <span class="stat-label">Components</span>
+          </li>
+          <li>
+            <span class="stat-value">WCAG 2.2</span>
+            <span class="stat-label">AA Compliant</span>
+          </li>
+          <li>
+            <span class="stat-value">40+</span>
+            <span class="stat-label">Design Tokens</span>
+          </li>
+        </ul>
+      </div>
+      <div class="hero-visual">
+        <video class="hero-video" autoplay muted loop playsinline aria-label="Design software in action">
+          <source src="design software.mp4" type="video/mp4" />
+        </video>
+      </div>
+    </div>
+  </section>
+
+
+
+  <!-- ======================== FEATURES ======================== -->
+  <section class="features" id="features">
+    <div class="container">
+      <div class="section-header reveal">
+        <p class="section-tag">Features</p>
+        <h2 class="section-title">Everything you need,<br />nothing you don't</h2>
+        <p class="section-description">
+          A lean, token-driven system engineered for consistency across every surface.
+        </p>
+      </div>
+      <div class="video-showcase reveal-scale">
+        <video class="showcase-video" autoplay muted loop playsinline aria-label="3D workflow demonstration">
+          <source src="3d workflow.mp4" type="video/mp4" />
+        </video>
+      </div>
+      <ul class="feature-grid stagger" role="list">
+        <li class="feature-card">
+          <div class="feature-icon feature-icon--teal" aria-hidden="true">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="13.5" cy="6.5" r="2.5"/>
+              <circle cx="17.5" cy="10.5" r="2.5"/>
+              <circle cx="8.5" cy="7.5" r="2.5"/>
+              <circle cx="6.5" cy="12.5" r="2.5"/>
+              <path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10c1.8 0 3.5-.5 5-1.3C14.2 19 12 16 12 12c0-3 1.5-5.7 3.8-7.5C14.5 3 13.3 2 12 2z"/>
+            </svg>
+          </div>
+          <h3 class="feature-title">
+            <a href="#features" class="feature-link">Semantic Tokens</a>
+          </h3>
+          <p class="feature-text">
+            Color, spacing, typography, and radius tokens that map directly to
+            your brand — no raw hex values, no guesswork.
+          </p>
+        </li>
+        <li class="feature-card">
+          <div class="feature-icon feature-icon--blue" aria-hidden="true">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="4" r="2"/>
+              <path d="M12 6v4"/>
+              <path d="M12 10l-4 8"/>
+              <path d="M12 10l4 8"/>
+              <path d="M6 18h12"/>
+              <circle cx="6" cy="20" r="1.5"/>
+              <circle cx="18" cy="20" r="1.5"/>
+            </svg>
+          </div>
+          <h3 class="feature-title">
+            <a href="#features" class="feature-link">Accessible by Default</a>
+          </h3>
+          <p class="feature-text">
+            WCAG 2.2 AA compliance baked in. Focus-visible states, contrast
+            checks, and keyboard navigation on every component.
+          </p>
+        </li>
+        <li class="feature-card">
+          <div class="feature-icon feature-icon--purple" aria-hidden="true">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="2" y="3" width="20" height="14" rx="2"/>
+              <path d="M8 21h8"/>
+              <path d="M12 17v4"/>
+              <rect x="5" y="6" width="4" height="8" rx="0.5"/>
+              <rect x="11" y="6" width="8" height="3" rx="0.5"/>
+              <rect x="11" y="11" width="8" height="3" rx="0.5"/>
+            </svg>
+          </div>
+          <h3 class="feature-title">
+            <a href="#features" class="feature-link">Responsive Layouts</a>
+          </h3>
+          <p class="feature-text">
+            Every component defines behavior across breakpoints — from mobile
+            to ultra-wide — with edge-case handling included.
+          </p>
+        </li>
+        <li class="feature-card">
+          <div class="feature-icon feature-icon--green" aria-hidden="true">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="1" y="5" width="22" height="14" rx="7"/>
+              <circle cx="16" cy="12" r="3"/>
+            </svg>
+          </div>
+          <h3 class="feature-title">
+            <a href="#features" class="feature-link">State Management</a>
+          </h3>
+          <p class="feature-text">
+            Default, hover, focus-visible, active, disabled, loading, and error
+            — every state documented and implementation-ready.
+          </p>
+        </li>
+        <li class="feature-card">
+          <div class="feature-icon feature-icon--orange" aria-hidden="true">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+            </svg>
+          </div>
+          <h3 class="feature-title">
+            <a href="#features" class="feature-link">Dark Mode Ready</a>
+          </h3>
+          <p class="feature-text">
+            Semantic surface and text tokens flip seamlessly between light and
+            dark contexts with zero overrides needed.
+          </p>
+        </li>
+        <li class="feature-card">
+          <div class="feature-icon feature-icon--pink" aria-hidden="true">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="3" y="3" width="7" height="7" rx="1"/>
+              <rect x="14" y="3" width="7" height="7" rx="1"/>
+              <rect x="3" y="14" width="7" height="7" rx="1"/>
+              <rect x="14" y="14" width="7" height="7" rx="1"/>
+            </svg>
+          </div>
+          <h3 class="feature-title">
+            <a href="#features" class="feature-link">Component Anatomy</a>
+          </h3>
+          <p class="feature-text">
+            Every component ships with defined anatomy, variants, interaction
+            patterns, and anti-patterns for your team.
+          </p>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ======================== SERVICES ======================== -->
+  <section class="services" id="services">
+    <div class="container">
+      <div class="section-header reveal">
+        <p class="section-tag">Services</p>
+        <h2 class="section-title">Built for real workflows</h2>
+        <p class="section-description">
+          From audits to full system rollouts — Essence adapts to how your team works.
+        </p>
+      </div>
+      <ul class="service-list stagger" role="list">
+        <li class="service-item">
+          <a href="#services" class="service-link">
+            <div class="service-number">01</div>
+            <div class="service-body">
+              <h3 class="service-title">Design System Audit</h3>
+              <p class="service-text">
+                We map your existing UI, identify inconsistencies, and deliver a
+                prioritized remediation roadmap with token-level recommendations.
+              </p>
+            </div>
+            <span class="service-arrow" aria-hidden="true">→</span>
+          </a>
+        </li>
+        <li class="service-item">
+          <a href="#services" class="service-link">
+            <div class="service-number">02</div>
+            <div class="service-body">
+              <h3 class="service-title">Token Architecture</h3>
+              <p class="service-text">
+                Custom token taxonomies for color, spacing, typography, and motion —
+                structured for multi-platform delivery from day one.
+              </p>
+            </div>
+            <span class="service-arrow" aria-hidden="true">→</span>
+          </a>
+        </li>
+        <li class="service-item">
+          <a href="#services" class="service-link">
+            <div class="service-number">03</div>
+            <div class="service-body">
+              <h3 class="service-title">Component Library Build</h3>
+              <p class="service-text">
+                Production-ready components with full state documentation, keyboard
+                behavior, and accessibility acceptance criteria.
+              </p>
+            </div>
+            <span class="service-arrow" aria-hidden="true">→</span>
+          </a>
+        </li>
+        <li class="service-item">
+          <a href="#services" class="service-link">
+            <div class="service-number">04</div>
+            <div class="service-body">
+              <h3 class="service-title">Ongoing System Support</h3>
+              <p class="service-text">
+                Monthly reviews, component additions, and governance coaching to
+                keep your system healthy as your product evolves.
+              </p>
+            </div>
+            <span class="service-arrow" aria-hidden="true">→</span>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ======================== ABOUT ======================== -->
+  <section class="about" id="about">
+    <div class="container about-inner">
+      <div class="about-visual reveal-left">
+        <video class="about-video" autoplay muted loop playsinline aria-label="Building the design system">
+          <source src="building .mp4" type="video/mp4" />
+        </video>
+      </div>
+      <div class="about-content reveal-right">
+        <p class="section-tag">About Essence</p>
+        <h2 class="section-title">Design systems,<br />done right</h2>
+        <p class="about-text">
+          Essence was founded on a simple belief: every team deserves a design
+          system that works as hard as they do. We build token-driven, accessible
+          systems that scale with your product — not against it.
+        </p>
+        <ul class="about-values" role="list">
+          <li>
+            <a href="#about" class="value-link">
+              <strong>Consistency first</strong>
+              <span>System-level decisions over one-off overrides, every time.</span>
+            </a>
+          </li>
+          <li>
+            <a href="#about" class="value-link">
+              <strong>Accessibility always</strong>
+              <span>WCAG 2.2 AA is the floor, not the ceiling.</span>
+            </a>
+          </li>
+          <li>
+            <a href="#about" class="value-link">
+              <strong>Implementation ready</strong>
+              <span>Every spec ships with testable acceptance criteria.</span>
+            </a>
+          </li>
+          <li>
+            <a href="#about" class="value-link">
+              <strong>Team ownership</strong>
+              <span>Systems your team can maintain without us in the room.</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================== RESOURCES ======================== -->
+  <section class="resources" id="resources">
+    <div class="container">
+      <div class="section-header reveal">
+        <p class="section-tag">Resources</p>
+        <h2 class="section-title">Learn, build, ship</h2>
+        <p class="section-description">
+          Guides, references, and case studies to help your team get the most from Essence.
+        </p>
+      </div>
+      <ul class="resource-grid stagger" role="list">
+        <li class="resource-card">
+          <a href="#resources" class="resource-link-wrap">
+            <span class="resource-category">Guide</span>
+            <h3 class="resource-title">Getting Started with Semantic Tokens</h3>
+            <p class="resource-meta">8 min read · Beginner</p>
+          </a>
+        </li>
+        <li class="resource-card">
+          <a href="#resources" class="resource-link-wrap">
+            <span class="resource-category">Reference</span>
+            <h3 class="resource-title">Color Token Architecture Deep-Dive</h3>
+            <p class="resource-meta">12 min read · Intermediate</p>
+          </a>
+        </li>
+        <li class="resource-card">
+          <a href="#resources" class="resource-link-wrap">
+            <span class="resource-category">Case Study</span>
+            <h3 class="resource-title">How Northwind Cut UI Bugs by 68%</h3>
+            <p class="resource-meta">6 min read · All levels</p>
+          </a>
+        </li>
+        <li class="resource-card">
+          <a href="#resources" class="resource-link-wrap">
+            <span class="resource-category">Guide</span>
+            <h3 class="resource-title">Keyboard Navigation Patterns</h3>
+            <p class="resource-meta">10 min read · Intermediate</p>
+          </a>
+        </li>
+        <li class="resource-card">
+          <a href="#resources" class="resource-link-wrap">
+            <span class="resource-category">Reference</span>
+            <h3 class="resource-title">Component State Documentation Standard</h3>
+            <p class="resource-meta">5 min read · Advanced</p>
+          </a>
+        </li>
+
+      </ul>
+    </div>
+  </section>
+
+  <!-- ======================== PRICING ======================== -->
+  <section class="pricing" id="pricing">
+    <div class="container">
+      <div class="section-header reveal">
+        <p class="section-tag">Pricing</p>
+        <h2 class="section-title">Simple, transparent plans</h2>
+        <p class="section-description">
+          Start free. Scale when your system is ready.
+        </p>
+      </div>
+      <ul class="pricing-grid stagger" role="list">
+        <li class="pricing-card">
+          <a href="#pricing" class="pricing-link-wrap">
+            <p class="pricing-plan">Starter</p>
+            <p class="pricing-price">$0<span class="pricing-period">/mo</span></p>
+            <p class="pricing-description">For solo designers exploring the system.</p>
+            <ul class="pricing-features" role="list">
+              <li>Core token library</li>
+              <li>12 base components</li>
+              <li>Community support</li>
+              <li>Single project</li>
+            </ul>
+            <span class="pricing-cta">Start free →</span>
+          </a>
+        </li>
+        <li class="pricing-card pricing-card--featured">
+          <a href="#pricing" class="pricing-link-wrap">
+            <p class="pricing-badge">Most Popular</p>
+            <p class="pricing-plan">Team</p>
+            <p class="pricing-price">$49<span class="pricing-period">/mo</span></p>
+            <p class="pricing-description">For growing teams shipping real products.</p>
+            <ul class="pricing-features" role="list">
+              <li>Full token library</li>
+              <li>All 120+ components</li>
+              <li>Priority support</li>
+              <li>Unlimited projects</li>
+              <li>Dark mode tokens</li>
+            </ul>
+            <span class="pricing-cta pricing-cta--dark">Get started →</span>
+          </a>
+        </li>
+        <li class="pricing-card">
+          <a href="#pricing" class="pricing-link-wrap">
+            <p class="pricing-plan">Enterprise</p>
+            <p class="pricing-price">Custom</p>
+            <p class="pricing-description">For organizations with complex needs.</p>
+            <ul class="pricing-features" role="list">
+              <li>Custom token taxonomy</li>
+              <li>Dedicated components</li>
+              <li>SLA support</li>
+              <li>Onboarding workshops</li>
+              <li>Governance coaching</li>
+            </ul>
+            <span class="pricing-cta">Contact sales →</span>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ======================== CTA ======================== -->
+  <section class="cta" id="contact">
+    <div class="container cta-inner reveal-scale">
+      <h2 class="cta-title">Ready to build with clarity?</h2>
+      <p class="cta-text">
+        Join teams who ship consistent, accessible interfaces every day with Essence.
+      </p>
+      <div class="cta-actions">
+        <a href="#contact" class="btn btn-primary">Start for Free</a>
+        <a href="#resources" class="btn btn-ghost">Read the Docs</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================== FOOTER ======================== -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <a href="#top" class="brand" aria-label="Essence home">
+          <span class="brand-mark">E</span>
+          <span class="brand-name">Essence</span>
+        </a>
+        <p class="footer-tagline">Clarity in every detail.</p>
+      </div>
+      <div class="footer-columns">
+        <div class="footer-col">
+          <h4 class="footer-col-title">Product</h4>
+          <ul class="footer-links" role="list">
+            <li><a href="#features">Features</a></li>
+            <li><a href="#pricing">Pricing</a></li>
+            <li><a href="#resources">Resources</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4 class="footer-col-title">Support</h4>
+          <ul class="footer-links" role="list">
+            <li><a href="#">Documentation</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p class="footer-copy">&copy; 2026 Essence. All rights reserved.</p>
+        <ul class="footer-social" role="list">
+          <li><a href="#" aria-label="Twitter">Tw</a></li>
+          <li><a href="#" aria-label="GitHub">Gh</a></li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const toggle = document.querySelector('.nav-toggle');
+    const navList = document.querySelector('.nav-list');
+
+    toggle.addEventListener('click', () => {
+      const open = navList.classList.toggle('is-open');
+      toggle.setAttribute('aria-expanded', open);
+    });
+
+    // Close menu when a nav link is clicked
+    navList.querySelectorAll('.nav-link').forEach(link => {
+      link.addEventListener('click', () => {
+        navList.classList.remove('is-open');
+        toggle.setAttribute('aria-expanded', 'false');
+      });
+    });
+
+    // Close menu when clicking outside
+    document.addEventListener('click', (e) => {
+      if (!e.target.closest('.nav')) {
+        navList.classList.remove('is-open');
+        toggle.setAttribute('aria-expanded', 'false');
+      }
+    });
+
+    // Scroll-reveal animations via Intersection Observer
+    const revealEls = document.querySelectorAll('.reveal, .reveal-left, .reveal-right, .reveal-scale, .stagger');
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('revealed');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.15, rootMargin: '0px 0px -40px 0px' });
+
+    revealEls.forEach(el => observer.observe(el));
+  </script>
+</body>
+</html>
