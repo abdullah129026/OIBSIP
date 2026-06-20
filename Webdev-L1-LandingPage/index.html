@@ -3,469 +3,299 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Essence — Clarity in Every Detail</title>
+  <title>Essence - Accelerate your 3D workflow</title>
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-
-  <!-- ======================== HEADER / NAV ======================== -->
-  <header class="header" id="top">
-    <div class="container header-inner">
-      <a href="#top" class="brand" aria-label="Essence home">
-        <span class="brand-mark">E</span>
-        <span class="brand-name">Essence</span>
-      </a>
-      <nav class="nav" aria-label="Primary navigation">
-        <button class="nav-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
-          <span></span>
-          <span></span>
-          <span></span>
+  <header class="site-header" id="top">
+    <div class="container header-shell">
+      <a class="brand" href="#top" aria-label="Essence home">Essence</a>
+      <nav class="site-nav" aria-label="Primary navigation">
+        <button class="nav-toggle" type="button" aria-label="Toggle menu" aria-expanded="false">
+          <span></span><span></span><span></span>
         </button>
-        <ul class="nav-list" role="list">
-          <li><a href="#features" class="nav-link">Features</a></li>
-          <li><a href="#services" class="nav-link">Services</a></li>
-          <li><a href="#about" class="nav-link">About</a></li>
-          <li><a href="#resources" class="nav-link">Resources</a></li>
+        <ul class="nav-list">
+          <li class="nav-item nav-item--dropdown">
+            <a href="#products" class="nav-link">Products <svg class="nav-caret" viewBox="0 0 10 6" aria-hidden="true"><path d="M1 1l4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+            <div class="dropdown dropdown--products">
+              <a href="#products" class="dropdown-product">
+                <span class="dropdown-badge badge-orange" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M7 8a5 5 0 1 1 0 8" />
+                    <path d="M7 8h5a5 5 0 0 1 0 8H7" />
+                  </svg>
+                </span>
+                <div>
+                  <strong>Project Dream</strong>
+                  <p>AI-powered image and video creation for 3D artists</p>
+                </div>
+              </a>
+              <a href="#products" class="dropdown-product">
+                <span class="dropdown-badge badge-purple" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <rect x="3" y="4" width="18" height="16" rx="3" />
+                    <path d="M7 8h10" />
+                    <path d="M7 12h10" />
+                    <path d="M7 16h6" />
+                  </svg>
+                </span>
+                <div>
+                  <strong>RenderFlow</strong>
+                  <p>Render farm management, monitoring, and automation</p>
+                </div>
+              </a>
+              <a href="#products" class="dropdown-product">
+                <span class="dropdown-badge badge-cyan" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M4 7h9v10H4z" />
+                    <path d="M14 9h6l-4 3 4 3h-6z" />
+                  </svg>
+                </span>
+                <div>
+                  <strong>Scene Manager</strong>
+                  <p>Scene management and batch rendering for 3ds Max</p>
+                </div>
+              </a>
+              <aside class="dropdown-story">
+                <span>Customer Stories</span>
+                <h4>How the World's Top Archviz Studio Runs Production</h4>
+                <p>Pulze was born inside Brick Visual. Today the studio runs all three products across 80+ artists, 150 computers, and large-scale architectural animation production.</p>
+              </aside>
+            </div>
+          </li>
           <li><a href="#pricing" class="nav-link">Pricing</a></li>
-          <li><a href="#contact" class="nav-link nav-link--cta">Get Started</a></li>
+          <li><a href="#blog" class="nav-link">Blog</a></li>
+          <li class="nav-item nav-item--dropdown">
+            <a href="#resources" class="nav-link">Resources <svg class="nav-caret" viewBox="0 0 10 6" aria-hidden="true"><path d="M1 1l4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+            <div class="dropdown dropdown--resources">
+              <a href="#" class="dropdown-resource"><span class="resource-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h12l4 4v12H4z"/><path d="M14 4v6h6"/></svg>
+              </span>Docs</a>
+              <a href="#" class="dropdown-resource"><span class="resource-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 14l11-6-11-6v12z"/><rect x="3" y="6" width="5" height="12" rx="1"/></svg>
+              </span>Tutorials</a>
+              <a href="#" class="dropdown-resource"><span class="resource-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="4" width="16" height="16" rx="4"/><path d="M9 9h6"/><path d="M9 12h6"/><path d="M9 15h4"/></svg>
+              </span>FAQ</a>
+              <a href="#" class="dropdown-resource"><span class="resource-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 4-3.6 7.8-8 10-4.4-2.2-8-6-8-10a8 8 0 0 1 16 0z"/><path d="M12 10a2 2 0 1 0 0 .1"/></svg>
+              </span>Discord</a>
+              <a href="#" class="dropdown-resource"><span class="resource-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="3"/><path d="M3 8l9 6 9-6"/></svg>
+              </span>Contact Us</a>
+            </div>
+          </li>
+          <li><a href="#about" class="nav-link">About Us</a></li>
         </ul>
       </nav>
+      <div class="header-actions">
+        <a href="#" class="header-login">Login</a>
+        <a href="#contact" class="btn btn-dark">Get Started</a>
+      </div>
     </div>
   </header>
 
-  <!-- ======================== HERO ======================== -->
-  <section class="hero" id="hero">
-    <div class="container hero-inner">
-      <div class="hero-content">
-        <p class="hero-tag">Design System · v2.0</p>
-        <h1 class="hero-title">Clarity in<br /><span class="text-accent">Every Detail</span></h1>
-        <p class="hero-description">
-          Essence is a purpose-built design system that brings consistency,
-          accessibility, and speed to every interface your team ships.
-        </p>
-        <div class="hero-actions">
-          <a href="#contact" class="btn btn-primary">Start Building</a>
-          <a href="#features" class="btn btn-ghost">Explore Features</a>
+  <main>
+    <section class="hero">
+      <div class="hero-backdrop" aria-hidden="true"></div>
+      <div class="container hero-inner">
+        <div class="hero-visual" aria-hidden="true">
+          <div class="hero-glow hero-glow--blue"></div>
+          <div class="hero-glow hero-glow--peach"></div>
+          <div class="hero-glow hero-glow--violet"></div>
+          <div class="hero-dot-grid"></div>
         </div>
-        <ul class="hero-stats" role="list">
-          <li>
-            <span class="stat-value">120+</span>
-            <span class="stat-label">Components</span>
-          </li>
-          <li>
-            <span class="stat-value">WCAG 2.2</span>
-            <span class="stat-label">AA Compliant</span>
-          </li>
-          <li>
-            <span class="stat-value">40+</span>
-            <span class="stat-label">Design Tokens</span>
-          </li>
-        </ul>
-      </div>
-      <div class="hero-visual">
-        <video class="hero-video" autoplay muted loop playsinline aria-label="Design software in action">
-          <source src="design software.mp4" type="video/mp4" />
-        </video>
-      </div>
-    </div>
-  </section>
-
-
-
-  <!-- ======================== FEATURES ======================== -->
-  <section class="features" id="features">
-    <div class="container">
-      <div class="section-header reveal">
-        <p class="section-tag">Features</p>
-        <h2 class="section-title">Everything you need,<br />nothing you don't</h2>
-        <p class="section-description">
-          A lean, token-driven system engineered for consistency across every surface.
-        </p>
-      </div>
-      <div class="video-showcase reveal-scale">
-        <video class="showcase-video" autoplay muted loop playsinline aria-label="3D workflow demonstration">
-          <source src="3d workflow.mp4" type="video/mp4" />
-        </video>
-      </div>
-      <ul class="feature-grid stagger" role="list">
-        <li class="feature-card">
-          <div class="feature-icon feature-icon--teal" aria-hidden="true">
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <circle cx="13.5" cy="6.5" r="2.5"/>
-              <circle cx="17.5" cy="10.5" r="2.5"/>
-              <circle cx="8.5" cy="7.5" r="2.5"/>
-              <circle cx="6.5" cy="12.5" r="2.5"/>
-              <path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10c1.8 0 3.5-.5 5-1.3C14.2 19 12 16 12 12c0-3 1.5-5.7 3.8-7.5C14.5 3 13.3 2 12 2z"/>
-            </svg>
+        <div class="hero-copy">
+          <h1>Accelerate every stage of your 3D workflow</h1>
+          <p>Scene management, render automation, and AI-powered image creation</p>
+          <div class="hero-built-for">
+            <span>Built for:</span>
+            <strong id="rotating-text">3D Artists</strong>
           </div>
-          <h3 class="feature-title">
-            <a href="#features" class="feature-link">Semantic Tokens</a>
-          </h3>
-          <p class="feature-text">
-            Color, spacing, typography, and radius tokens that map directly to
-            your brand — no raw hex values, no guesswork.
-          </p>
-        </li>
-        <li class="feature-card">
-          <div class="feature-icon feature-icon--blue" aria-hidden="true">
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <circle cx="12" cy="4" r="2"/>
-              <path d="M12 6v4"/>
-              <path d="M12 10l-4 8"/>
-              <path d="M12 10l4 8"/>
-              <path d="M6 18h12"/>
-              <circle cx="6" cy="20" r="1.5"/>
-              <circle cx="18" cy="20" r="1.5"/>
-            </svg>
+          <div class="hero-actions">
+            <a href="#contact" class="btn btn-dark">Get Started</a>
+            <a href="#products" class="btn btn-light">Explore Products</a>
           </div>
-          <h3 class="feature-title">
-            <a href="#features" class="feature-link">Accessible by Default</a>
-          </h3>
-          <p class="feature-text">
-            WCAG 2.2 AA compliance baked in. Focus-visible states, contrast
-            checks, and keyboard navigation on every component.
-          </p>
-        </li>
-        <li class="feature-card">
-          <div class="feature-icon feature-icon--purple" aria-hidden="true">
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <rect x="2" y="3" width="20" height="14" rx="2"/>
-              <path d="M8 21h8"/>
-              <path d="M12 17v4"/>
-              <rect x="5" y="6" width="4" height="8" rx="0.5"/>
-              <rect x="11" y="6" width="8" height="3" rx="0.5"/>
-              <rect x="11" y="11" width="8" height="3" rx="0.5"/>
-            </svg>
-          </div>
-          <h3 class="feature-title">
-            <a href="#features" class="feature-link">Responsive Layouts</a>
-          </h3>
-          <p class="feature-text">
-            Every component defines behavior across breakpoints — from mobile
-            to ultra-wide — with edge-case handling included.
-          </p>
-        </li>
-        <li class="feature-card">
-          <div class="feature-icon feature-icon--green" aria-hidden="true">
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <rect x="1" y="5" width="22" height="14" rx="7"/>
-              <circle cx="16" cy="12" r="3"/>
-            </svg>
-          </div>
-          <h3 class="feature-title">
-            <a href="#features" class="feature-link">State Management</a>
-          </h3>
-          <p class="feature-text">
-            Default, hover, focus-visible, active, disabled, loading, and error
-            — every state documented and implementation-ready.
-          </p>
-        </li>
-        <li class="feature-card">
-          <div class="feature-icon feature-icon--orange" aria-hidden="true">
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
-            </svg>
-          </div>
-          <h3 class="feature-title">
-            <a href="#features" class="feature-link">Dark Mode Ready</a>
-          </h3>
-          <p class="feature-text">
-            Semantic surface and text tokens flip seamlessly between light and
-            dark contexts with zero overrides needed.
-          </p>
-        </li>
-        <li class="feature-card">
-          <div class="feature-icon feature-icon--pink" aria-hidden="true">
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <rect x="3" y="3" width="7" height="7" rx="1"/>
-              <rect x="14" y="3" width="7" height="7" rx="1"/>
-              <rect x="3" y="14" width="7" height="7" rx="1"/>
-              <rect x="14" y="14" width="7" height="7" rx="1"/>
-            </svg>
-          </div>
-          <h3 class="feature-title">
-            <a href="#features" class="feature-link">Component Anatomy</a>
-          </h3>
-          <p class="feature-text">
-            Every component ships with defined anatomy, variants, interaction
-            patterns, and anti-patterns for your team.
-          </p>
-        </li>
-      </ul>
-    </div>
-  </section>
-
-  <!-- ======================== SERVICES ======================== -->
-  <section class="services" id="services">
-    <div class="container">
-      <div class="section-header reveal">
-        <p class="section-tag">Services</p>
-        <h2 class="section-title">Built for real workflows</h2>
-        <p class="section-description">
-          From audits to full system rollouts — Essence adapts to how your team works.
-        </p>
+        </div>
       </div>
-      <ul class="service-list stagger" role="list">
-        <li class="service-item">
-          <a href="#services" class="service-link">
-            <div class="service-number">01</div>
-            <div class="service-body">
-              <h3 class="service-title">Design System Audit</h3>
-              <p class="service-text">
-                We map your existing UI, identify inconsistencies, and deliver a
-                prioritized remediation roadmap with token-level recommendations.
-              </p>
-            </div>
-            <span class="service-arrow" aria-hidden="true">→</span>
-          </a>
-        </li>
-        <li class="service-item">
-          <a href="#services" class="service-link">
-            <div class="service-number">02</div>
-            <div class="service-body">
-              <h3 class="service-title">Token Architecture</h3>
-              <p class="service-text">
-                Custom token taxonomies for color, spacing, typography, and motion —
-                structured for multi-platform delivery from day one.
-              </p>
-            </div>
-            <span class="service-arrow" aria-hidden="true">→</span>
-          </a>
-        </li>
-        <li class="service-item">
-          <a href="#services" class="service-link">
-            <div class="service-number">03</div>
-            <div class="service-body">
-              <h3 class="service-title">Component Library Build</h3>
-              <p class="service-text">
-                Production-ready components with full state documentation, keyboard
-                behavior, and accessibility acceptance criteria.
-              </p>
-            </div>
-            <span class="service-arrow" aria-hidden="true">→</span>
-          </a>
-        </li>
-        <li class="service-item">
-          <a href="#services" class="service-link">
-            <div class="service-number">04</div>
-            <div class="service-body">
-              <h3 class="service-title">Ongoing System Support</h3>
-              <p class="service-text">
-                Monthly reviews, component additions, and governance coaching to
-                keep your system healthy as your product evolves.
-              </p>
-            </div>
-            <span class="service-arrow" aria-hidden="true">→</span>
-          </a>
-        </li>
-      </ul>
-    </div>
-  </section>
+    </section>
 
-  <!-- ======================== ABOUT ======================== -->
-  <section class="about" id="about">
-    <div class="container about-inner">
-      <div class="about-visual reveal-left">
-        <video class="about-video" autoplay muted loop playsinline aria-label="Building the design system">
-          <source src="building .mp4" type="video/mp4" />
-        </video>
+    <section class="trust">
+      <div class="container">
+        <p class="trust-copy">Trusted by 3,000+ professionals worldwide</p>
       </div>
-      <div class="about-content reveal-right">
-        <p class="section-tag">About Essence</p>
-        <h2 class="section-title">Design systems,<br />done right</h2>
-        <p class="about-text">
-          Essence was founded on a simple belief: every team deserves a design
-          system that works as hard as they do. We build token-driven, accessible
-          systems that scale with your product — not against it.
-        </p>
-        <ul class="about-values" role="list">
-          <li>
-            <a href="#about" class="value-link">
-              <strong>Consistency first</strong>
-              <span>System-level decisions over one-off overrides, every time.</span>
-            </a>
-          </li>
-          <li>
-            <a href="#about" class="value-link">
-              <strong>Accessibility always</strong>
-              <span>WCAG 2.2 AA is the floor, not the ceiling.</span>
-            </a>
-          </li>
-          <li>
-            <a href="#about" class="value-link">
-              <strong>Implementation ready</strong>
-              <span>Every spec ships with testable acceptance criteria.</span>
-            </a>
-          </li>
-          <li>
-            <a href="#about" class="value-link">
-              <strong>Team ownership</strong>
-              <span>Systems your team can maintain without us in the room.</span>
-            </a>
-          </li>
-        </ul>
+      <div class="logo-marquee" aria-hidden="true">
+        <div class="marquee-track">
+          <span>AECOM</span><span>BREITLING</span><span>Gensler</span><span>DBOX</span><span>Warren and Mahoney</span><span>SOM</span><span>Visualhouse</span><span>PixelFlakes</span><span>Kilograph</span><span>BergaGonzalez</span><span>Play-Time</span><span>Bloomimages</span>
+          <span>AECOM</span><span>BREITLING</span><span>Gensler</span><span>DBOX</span><span>Warren and Mahoney</span><span>SOM</span><span>Visualhouse</span><span>PixelFlakes</span><span>Kilograph</span><span>BergaGonzalez</span><span>Play-Time</span><span>Bloomimages</span>
+        </div>
       </div>
-    </div>
-  </section>
-
-  <!-- ======================== RESOURCES ======================== -->
-  <section class="resources" id="resources">
-    <div class="container">
-      <div class="section-header reveal">
-        <p class="section-tag">Resources</p>
-        <h2 class="section-title">Learn, build, ship</h2>
-        <p class="section-description">
-          Guides, references, and case studies to help your team get the most from Essence.
-        </p>
+      <div class="container stats">
+        <div class="stat-item"><strong>100+</strong><span>Countries Worldwide</span></div>
+        <div class="stat-item"><strong>8</strong><span>Years building for 3D Artists</span></div>
+        <div class="stat-item"><strong>35000+</strong><span>Installations</span></div>
+        <div class="stat-item"><strong>20+</strong><span>Apps and Renderers supported</span></div>
       </div>
-      <ul class="resource-grid stagger" role="list">
-        <li class="resource-card">
-          <a href="#resources" class="resource-link-wrap">
-            <span class="resource-category">Guide</span>
-            <h3 class="resource-title">Getting Started with Semantic Tokens</h3>
-            <p class="resource-meta">8 min read · Beginner</p>
-          </a>
-        </li>
-        <li class="resource-card">
-          <a href="#resources" class="resource-link-wrap">
-            <span class="resource-category">Reference</span>
-            <h3 class="resource-title">Color Token Architecture Deep-Dive</h3>
-            <p class="resource-meta">12 min read · Intermediate</p>
-          </a>
-        </li>
-        <li class="resource-card">
-          <a href="#resources" class="resource-link-wrap">
-            <span class="resource-category">Case Study</span>
-            <h3 class="resource-title">How Northwind Cut UI Bugs by 68%</h3>
-            <p class="resource-meta">6 min read · All levels</p>
-          </a>
-        </li>
-        <li class="resource-card">
-          <a href="#resources" class="resource-link-wrap">
-            <span class="resource-category">Guide</span>
-            <h3 class="resource-title">Keyboard Navigation Patterns</h3>
-            <p class="resource-meta">10 min read · Intermediate</p>
-          </a>
-        </li>
-        <li class="resource-card">
-          <a href="#resources" class="resource-link-wrap">
-            <span class="resource-category">Reference</span>
-            <h3 class="resource-title">Component State Documentation Standard</h3>
-            <p class="resource-meta">5 min read · Advanced</p>
-          </a>
-        </li>
+    </section>
 
-      </ul>
-    </div>
-  </section>
-
-  <!-- ======================== PRICING ======================== -->
-  <section class="pricing" id="pricing">
-    <div class="container">
-      <div class="section-header reveal">
-        <p class="section-tag">Pricing</p>
-        <h2 class="section-title">Simple, transparent plans</h2>
-        <p class="section-description">
-          Start free. Scale when your system is ready.
-        </p>
+    <section class="products" id="products">
+      <div class="container">
+        <div class="section-heading">
+          <h2>Meet the products</h2>
+          <p>From scene setup to final render and creative exploration. Pick the tool that fits your needs.</p>
+        </div>
+        <div class="product-grid">
+          <article class="product-card">
+            <img class="product-icon" src="https://api.iconify.design/lucide:sparkles.svg?color=%23ff7b23" alt="" aria-hidden="true" />
+            <h3>Create and enhance with AI</h3>
+            <p>Your AI creative hub to generate, enhance, upscale, and animate so you can focus on creative decisions.</p>
+            <a href="#">Discover Project Dream</a>
+          </article>
+          <article class="product-card">
+            <img class="product-icon" src="https://api.iconify.design/lucide:server.svg?color=%239a5cec" alt="" aria-hidden="true" />
+            <h3>Render management simplified</h3>
+            <p>All-in-one render farm management that scales from a single workstation to hundreds of nodes.</p>
+            <a href="#">Discover RenderFlow</a>
+          </article>
+          <article class="product-card">
+            <img class="product-icon" src="https://api.iconify.design/lucide:layers-3.svg?color=%2352c2ea" alt="" aria-hidden="true" />
+            <h3>Total control over every scene</h3>
+            <p>Take full control of your scenes with a single, modular interface for cameras, lights, objects, and render settings.</p>
+            <a href="#">Discover Scene Manager</a>
+          </article>
+        </div>
       </div>
-      <ul class="pricing-grid stagger" role="list">
-        <li class="pricing-card">
-          <a href="#pricing" class="pricing-link-wrap">
-            <p class="pricing-plan">Starter</p>
-            <p class="pricing-price">$0<span class="pricing-period">/mo</span></p>
-            <p class="pricing-description">For solo designers exploring the system.</p>
-            <ul class="pricing-features" role="list">
-              <li>Core token library</li>
-              <li>12 base components</li>
-              <li>Community support</li>
-              <li>Single project</li>
-            </ul>
-            <span class="pricing-cta">Start free →</span>
-          </a>
-        </li>
-        <li class="pricing-card pricing-card--featured">
-          <a href="#pricing" class="pricing-link-wrap">
-            <p class="pricing-badge">Most Popular</p>
-            <p class="pricing-plan">Team</p>
-            <p class="pricing-price">$49<span class="pricing-period">/mo</span></p>
-            <p class="pricing-description">For growing teams shipping real products.</p>
-            <ul class="pricing-features" role="list">
-              <li>Full token library</li>
-              <li>All 120+ components</li>
-              <li>Priority support</li>
-              <li>Unlimited projects</li>
-              <li>Dark mode tokens</li>
-            </ul>
-            <span class="pricing-cta pricing-cta--dark">Get started →</span>
-          </a>
-        </li>
-        <li class="pricing-card">
-          <a href="#pricing" class="pricing-link-wrap">
-            <p class="pricing-plan">Enterprise</p>
-            <p class="pricing-price">Custom</p>
-            <p class="pricing-description">For organizations with complex needs.</p>
-            <ul class="pricing-features" role="list">
-              <li>Custom token taxonomy</li>
-              <li>Dedicated components</li>
-              <li>SLA support</li>
-              <li>Onboarding workshops</li>
-              <li>Governance coaching</li>
-            </ul>
-            <span class="pricing-cta">Contact sales →</span>
-          </a>
-        </li>
-      </ul>
-    </div>
-  </section>
+    </section>
 
-  <!-- ======================== CTA ======================== -->
-  <section class="cta" id="contact">
-    <div class="container cta-inner reveal-scale">
-      <h2 class="cta-title">Ready to build with clarity?</h2>
-      <p class="cta-text">
-        Join teams who ship consistent, accessible interfaces every day with Essence.
-      </p>
-      <div class="cta-actions">
-        <a href="#contact" class="btn btn-primary">Start for Free</a>
-        <a href="#resources" class="btn btn-ghost">Read the Docs</a>
+    <section class="showcase" id="pricing">
+      <div class="container">
+        <div class="showcase-panel">
+          <video class="showcase-video" autoplay muted loop playsinline aria-label="3D workflow demonstration">
+            <source src="3d workflow.mp4" type="video/mp4" />
+          </video>
+        </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- ======================== FOOTER ======================== -->
-  <footer class="footer">
-    <div class="container footer-inner">
-      <div class="footer-brand">
-        <a href="#top" class="brand" aria-label="Essence home">
-          <span class="brand-mark">E</span>
-          <span class="brand-name">Essence</span>
-        </a>
-        <p class="footer-tagline">Clarity in every detail.</p>
+    <section class="tools" id="resources">
+      <div class="container tools-inner">
+        <div class="section-heading section-heading--left">
+          <h2>Works with the tools you already use</h2>
+          <p>Deep integrations with the most popular 3D software, renderers, and creative tools.</p>
+        </div>
+        <div class="tool-rail" aria-hidden="true">
+          <span>3ds Max</span><span>Corona</span><span>V-Ray</span><span>SketchUp</span><span>Blender</span><span>Cinema 4D</span><span>Unreal Engine</span><span>Houdini</span><span>Rhino</span><span>Revit</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="testimonial">
+      <div class="container">
+        <div class="quote-card">
+          <p>Scene Manager is one of those rare tools that quietly becomes indispensable. Once it's part of your pipeline, it's very hard to imagine working without it.</p>
+          <footer>
+            <strong>Tanner Johnson</strong>
+            <span>Lead Visualization Artist</span>
+          </footer>
+        </div>
+      </div>
+    </section>
+
+    <section class="about" id="about">
+      <div class="container about-grid">
+        <div class="about-media">
+          <video class="about-video" autoplay muted loop playsinline aria-label="Building the design system">
+            <source src="building .mp4" type="video/mp4" />
+          </video>
+        </div>
+        <div class="about-copy">
+          <h2>From artists to artists</h2>
+          <p>Every Essence product is shaped by real production experience. We tackle the real problems in 3D production, and we don't stop until they're solved.</p>
+          <a href="#contact" class="btn btn-dark">Start Now</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="blog" id="blog">
+      <div class="container">
+        <div class="section-heading section-heading--center">
+          <h2>Latest from Essence</h2>
+        </div>
+        <div class="blog-grid">
+          <article class="blog-card">
+            <img class="blog-image" src="Event.jpg" alt="Crowded event hall with a large audience" />
+            <div class="meta-row"><span>Jun 9, 2026</span><span>2 min read</span></div>
+            <div class="chips"><span>Event</span><span>Conference</span></div>
+            <h3>Essence is Heading to WVF 2026 in Warsaw</h3>
+            <p>Essence is heading to WVF 2026. Find us at the booth, join our workshop, and celebrate the CG Awards.</p>
+          </article>
+          <article class="blog-card">
+            <img class="blog-image" src="Conference presentation.jpg" alt="Conference presentation with a large seated audience" />
+            <div class="meta-row"><span>May 22, 2026</span><span>4 min read</span></div>
+            <div class="chips"><span>Event</span><span>Conference</span></div>
+            <h3>Our Guide to EUE ReConnect 2026</h3>
+            <p>EUE ReConnect is back on June 4-5 in Utrecht. Here are the talks we're most excited about.</p>
+          </article>
+          <article class="blog-card">
+            <img class="blog-image" src="Artwork.jpg" alt="Soft painted landscape artwork with mountains and cloudy sky" />
+            <div class="meta-row"><span>Apr 13, 2026</span><span>7 min read</span></div>
+            <div class="chips"><span>Project Dream</span><span>Scene Manager</span></div>
+            <h3>Artist Spotlight - Wellington Franzao</h3>
+            <p>CG artist and Creative Director Wellington Franzao shares how Scene Manager and Project Dream fit into his workflow.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta" id="contact">
+      <div class="container cta-card">
+        <h2>Ready to build with clarity?</h2>
+        <p>Join teams who ship consistent, accessible interfaces every day with Essence.</p>
+        <div class="cta-actions">
+          <a href="#" class="btn btn-dark">Get Started</a>
+          <a href="#products" class="btn btn-light">Explore Products</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <a class="footer-brand" href="#top">Essence</a>
+        <p>Professional tools for 3D production</p>
       </div>
       <div class="footer-columns">
-        <div class="footer-col">
-          <h4 class="footer-col-title">Product</h4>
-          <ul class="footer-links" role="list">
-            <li><a href="#features">Features</a></li>
-            <li><a href="#pricing">Pricing</a></li>
-            <li><a href="#resources">Resources</a></li>
-          </ul>
+        <div>
+          <h3>Explore</h3>
+          <a href="#about">About</a>
+          <a href="#blog">Blog</a>
+          <a href="#pricing">Pricing</a>
+          <a href="#">Customer Stories</a>
+          <a href="#">Press Kit</a>
         </div>
-        <div class="footer-col">
-          <h4 class="footer-col-title">Support</h4>
-          <ul class="footer-links" role="list">
-            <li><a href="#">Documentation</a></li>
-            <li><a href="#">Contact</a></li>
-          </ul>
+        <div>
+          <h3>Products</h3>
+          <a href="#">Project Dream</a>
+          <a href="#">RenderFlow</a>
+          <a href="#">Scene Manager</a>
+        </div>
+        <div>
+          <h3>Help</h3>
+          <a href="#">Docs</a>
+          <a href="#">Tutorials</a>
+          <a href="#">FAQ</a>
+          <a href="#">Discord</a>
+          <a href="#">Contact Us</a>
+          <a href="#">Status</a>
         </div>
       </div>
-      <div class="footer-bottom">
-        <p class="footer-copy">&copy; 2026 Essence. All rights reserved.</p>
-        <ul class="footer-social" role="list">
-          <li><a href="#" aria-label="Twitter">Tw</a></li>
-          <li><a href="#" aria-label="GitHub">Gh</a></li>
-        </ul>
+    </div>
+    <div class="container footer-bottom">
+      <p>&copy; 2026 Essence. All Rights Reserved.</p>
+      <div class="footer-legal">
+        <a href="#">Terms and Conditions</a>
+        <a href="#">Privacy Policy</a>
       </div>
     </div>
   </footer>
@@ -473,40 +303,83 @@
   <script>
     const toggle = document.querySelector('.nav-toggle');
     const navList = document.querySelector('.nav-list');
+    const dropdownItems = document.querySelectorAll('.nav-item--dropdown');
 
     toggle.addEventListener('click', () => {
       const open = navList.classList.toggle('is-open');
-      toggle.setAttribute('aria-expanded', open);
+      toggle.setAttribute('aria-expanded', String(open));
     });
 
-    // Close menu when a nav link is clicked
-    navList.querySelectorAll('.nav-link').forEach(link => {
-      link.addEventListener('click', () => {
-        navList.classList.remove('is-open');
-        toggle.setAttribute('aria-expanded', 'false');
+    dropdownItems.forEach((item) => {
+      const link = item.querySelector('.nav-link');
+      link.addEventListener('click', (event) => {
+        if (window.innerWidth < 768) {
+          event.preventDefault();
+          item.classList.toggle('is-open');
+          return;
+        }
       });
     });
 
-    // Close menu when clicking outside
-    document.addEventListener('click', (e) => {
-      if (!e.target.closest('.nav')) {
+    document.addEventListener('click', (event) => {
+      if (!event.target.closest('.site-nav')) {
         navList.classList.remove('is-open');
         toggle.setAttribute('aria-expanded', 'false');
+        dropdownItems.forEach((item) => item.classList.remove('is-open'));
       }
     });
 
-    // Scroll-reveal animations via Intersection Observer
-    const revealEls = document.querySelectorAll('.reveal, .reveal-left, .reveal-right, .reveal-scale, .stagger');
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
+    const footer = document.querySelector('.site-footer');
+    const footerObserver = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        document.body.classList.toggle('footer-view', entry.isIntersecting);
+      });
+    }, { threshold: 0.08 });
+    footerObserver.observe(footer);
+
+    const animateTargets = [
+      ...document.querySelectorAll('.section-heading'),
+      ...document.querySelectorAll('.product-card'),
+      ...document.querySelectorAll('.showcase-panel'),
+      ...document.querySelectorAll('.tool-rail'),
+      ...document.querySelectorAll('.quote-card'),
+      ...document.querySelectorAll('.about-copy'),
+      ...document.querySelectorAll('.about-media'),
+      ...document.querySelectorAll('.blog-card'),
+      ...document.querySelectorAll('.cta-card')
+    ];
+    animateTargets.forEach((element, index) => {
+      element.classList.add('scroll-animate');
+      if (element.classList.contains('section-heading')) element.dataset.dir = index % 2 === 0 ? 'up' : 'left';
+      else if (element.classList.contains('blog-card') || element.classList.contains('about-media')) element.dataset.dir = index % 2 === 0 ? 'left' : 'right';
+      else if (element.classList.contains('about-copy')) element.dataset.dir = 'right';
+      else element.dataset.dir = 'up';
+    });
+
+    const scrollObserver = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
         if (entry.isIntersecting) {
-          entry.target.classList.add('revealed');
-          observer.unobserve(entry.target);
+          entry.target.classList.remove('is-visible');
+          void entry.target.offsetWidth;
+          entry.target.classList.add('is-visible');
+        } else {
+          entry.target.classList.remove('is-visible');
         }
       });
-    }, { threshold: 0.15, rootMargin: '0px 0px -40px 0px' });
+    }, { threshold: 0.18, rootMargin: '0px 0px -8% 0px' });
+    animateTargets.forEach((element) => scrollObserver.observe(element));
 
-    revealEls.forEach(el => observer.observe(el));
+    const audiences = ['3D Artists', 'Architects', 'Archviz Studios', 'Product Designers', 'VFX Teams', 'Motion Designers', 'Interior Designers', 'Pipeline TDs'];
+    let audienceIndex = 0;
+    const rotatingText = document.getElementById('rotating-text');
+    setInterval(() => {
+      rotatingText.style.opacity = '0';
+      setTimeout(() => {
+        audienceIndex = (audienceIndex + 1) % audiences.length;
+        rotatingText.textContent = audiences[audienceIndex];
+        rotatingText.style.opacity = '1';
+      }, 220);
+    }, 2400);
   </script>
 </body>
 </html>
