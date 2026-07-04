@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="A beautiful glassmorphic todo app to manage your daily tasks — add, complete, edit, and delete tasks with ease." />
+  <title>Taskflow — Daily Task Manager</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body data-theme="light">
+
+  <!-- Background mesh blobs -->
+  <div class="bg-mesh" aria-hidden="true">
+    <div class="blob blob-1"></div>
+    <div class="blob blob-2"></div>
+    <div class="blob blob-3"></div>
+    <div class="blob blob-4"></div>
+  </div>
+
+  <div class="app-layout">
+
+    <!-- ═══════════════════════════════════════
+         SIDEBAR (desktop left rail)
+    ═══════════════════════════════════════ -->
+    <aside class="sidebar" id="sidebar" role="navigation" aria-label="Main navigation">
+      <div class="sidebar-logo">
+        <span class="logo-icon">✦</span>
+        <span class="logo-text">Taskflow</span>
+      </div>
+
+      <button id="btn-new-task-rail" class="btn-new-task-rail" aria-label="Create new task">
+        <span class="rail-btn-icon">+</span>
+        <span class="rail-btn-label">New Task</span>
+      </button>
+
+      <nav class="sidebar-nav" aria-label="App sections">
+        <button class="nav-tab nav-tab--active" id="nav-tasks" data-tab="tasks" aria-label="Tasks" aria-current="page">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h11"/></svg>
+          <span>Tasks</span>
+        </button>
+        <button class="nav-tab" id="nav-stats" data-tab="stats" aria-label="Statistics">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg>
+          <span>Stats</span>
+        </button>
+      </nav>
+
+      <div class="sidebar-footer">
+        <button id="theme-toggle-rail" class="theme-toggle" aria-label="Toggle dark mode" title="Toggle dark/light mode">
+          <span class="theme-icon theme-icon--light">☀️</span>
+          <span class="theme-icon theme-icon--dark">🌙</span>
+        </button>
+      </div>
+    </aside>
+
+    <!-- ═══════════════════════════════════════
+         MAIN PANEL — Todo Lists
+    ═══════════════════════════════════════ -->
+    <main class="panel panel--home" id="panel-home" role="main">
+
+      <!-- Header -->
+      <header class="panel-header">
+        <div class="header-left">
+          <button class="hamburger" id="hamburger-btn" aria-label="Open menu" aria-expanded="false">
+            <span></span><span></span><span></span>
+          </button>
+          <div class="header-title-group">
+            <h1 class="panel-title">My Tasks</h1>
+            <p class="panel-subtitle" id="header-date"></p>
+          </div>
+        </div>
+        <div class="header-right">
+          <button id="theme-toggle-header" class="theme-toggle theme-toggle--icon" aria-label="Toggle dark mode">
+            <span class="theme-icon theme-icon--light">☀️</span>
+            <span class="theme-icon theme-icon--dark">🌙</span>
+          </button>
+          <div class="header-avatar" aria-label="User avatar">A</div>
+        </div>
+      </header>
+
+      <!-- Quick-add bar (mobile/tablet) -->
+      <div class="quick-add-bar" id="quick-add-bar">
+        <input
+          type="text"
+          id="quick-input"
+          class="quick-input"
+          placeholder="Quick add a task…"
+          aria-label="Quick add task"
+          maxlength="200"
+        />
+        <button id="btn-quick-add" class="btn-quick-add" aria-label="Add task">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+        </button>
+      </div>
+
+      <!-- Filter pills -->
+      <div class="filter-row" role="tablist" aria-label="Filter tasks by category">
+        <button class="filter-pill filter-pill--active" data-filter="all" role="tab" aria-selected="true" id="filter-all">All</button>
+        <button class="filter-pill" data-filter="Meeting"   role="tab" aria-selected="false" id="filter-meeting">Meeting</button>
+        <button class="filter-pill" data-filter="Design"    role="tab" aria-selected="false" id="filter-design">Design</button>
+        <button class="filter-pill" data-filter="Personal"  role="tab" aria-selected="false" id="filter-personal">Personal</button>
+        <button class="filter-pill" data-filter="Work"      role="tab" aria-selected="false" id="filter-work">Work</button>
+        <button class="filter-pill" data-filter="Free time" role="tab" aria-selected="false" id="filter-freetime">Free time</button>
+        <button class="filter-pill" data-filter="Travel"    role="tab" aria-selected="false" id="filter-travel">Travel</button>
+      </div>
+
+      <!-- ──────────────────────────────
+           PENDING TASKS
+      ────────────────────────────── -->
+      <section class="todo-section" id="section-pending" aria-label="Pending tasks">
+        <div class="section-header">
+          <div class="section-title-row">
+            <span class="section-dot section-dot--pending"></span>
+            <h2 class="section-title">Pending Tasks</h2>
+          </div>
+          <span class="task-count task-count--pending" id="count-pending" aria-live="polite">0 pending</span>
+        </div>
+
+        <ul class="task-list" id="list-pending" role="list" aria-label="Pending tasks list"></ul>
+
+        <div class="empty-state" id="empty-pending" role="status" aria-live="polite">
+          <div class="empty-icon">🎯</div>
+          <p class="empty-title">All clear!</p>
+          <p class="empty-body">You're all caught up. Add a new task to get started.</p>
+        </div>
+      </section>
+
+      <!-- ──────────────────────────────
+           COMPLETED TASKS
+      ────────────────────────────── -->
+      <section class="todo-section" id="section-completed" aria-label="Completed tasks">
+        <div class="section-header">
+          <div class="section-title-row">
+            <span class="section-dot section-dot--completed"></span>
+            <h2 class="section-title">Completed</h2>
+          </div>
+          <span class="task-count task-count--completed" id="count-completed" aria-live="polite">0 completed</span>
+        </div>
+
+        <ul class="task-list" id="list-completed" role="list" aria-label="Completed tasks list"></ul>
+
+        <div class="empty-state" id="empty-completed" role="status" aria-live="polite">
+          <div class="empty-icon">✨</div>
+          <p class="empty-title">Nothing here yet</p>
+          <p class="empty-body">Complete a task and it will appear here.</p>
+        </div>
+      </section>
+
+    </main>
+
+    <!-- ═══════════════════════════════════════
+         CREATE / EDIT TASK PANEL
+    ═══════════════════════════════════════ -->
+    <aside class="panel panel--create" id="panel-create" aria-hidden="true" aria-label="Create or edit task">
+
+      <div class="create-header">
+        <button id="btn-close-create" class="btn-close" aria-label="Close panel">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+        </button>
+        <h2 class="create-title" id="create-panel-title">New Task</h2>
+        <div style="width:36px"></div>
+      </div>
+
+      <form class="create-form" id="create-form" novalidate>
+
+        <!-- Category pills -->
+        <div class="form-group">
+          <label class="form-label">Category</label>
+          <div class="category-pills" role="group" aria-label="Select category" id="category-pills">
+            <button type="button" class="cat-pill cat-pill--active" data-cat="Meeting"   id="cat-meeting">Meeting</button>
+            <button type="button" class="cat-pill" data-cat="Design"    id="cat-design">Design</button>
+            <button type="button" class="cat-pill" data-cat="Personal"  id="cat-personal">Personal</button>
+            <button type="button" class="cat-pill" data-cat="Work"      id="cat-work">Work</button>
+            <button type="button" class="cat-pill" data-cat="Free time" id="cat-freetime">Free time</button>
+            <button type="button" class="cat-pill" data-cat="Travel"    id="cat-travel">Travel</button>
+          </div>
+        </div>
+
+        <!-- Task title -->
+        <div class="form-group">
+          <label class="form-label" for="input-task-title">Task Title <span class="required">*</span></label>
+          <input
+            type="text"
+            id="input-task-title"
+            class="field-input"
+            placeholder="What needs to be done?"
+            maxlength="200"
+            required
+            aria-required="true"
+            aria-describedby="title-error"
+          />
+          <span class="field-error" id="title-error" role="alert" aria-live="assertive"></span>
+        </div>
+
+        <!-- Description -->
+        <div class="form-group">
+          <label class="form-label" for="input-task-desc">Description</label>
+          <textarea
+            id="input-task-desc"
+            class="field-input field-input--textarea"
+            placeholder="Add more details…"
+            rows="3"
+            maxlength="500"
+            aria-label="Task description"
+          ></textarea>
+        </div>
+
+        <!-- Priority -->
+        <div class="form-group">
+          <label class="form-label">Priority</label>
+          <div class="priority-row" role="group" aria-label="Task priority">
+            <button type="button" class="priority-btn" data-priority="low"    id="pri-low">🟢 Low</button>
+            <button type="button" class="priority-btn priority-btn--active" data-priority="medium" id="pri-medium">🟡 Medium</button>
+            <button type="button" class="priority-btn" data-priority="high"   id="pri-high">🔴 High</button>
+          </div>
+        </div>
+
+        <!-- Alert toggle -->
+        <div class="form-group form-group--row">
+          <label class="form-label form-label--inline" for="toggle-alert">Get alert for this task</label>
+          <button type="button" class="toggle-switch" id="toggle-alert" role="switch" aria-checked="false" aria-label="Toggle task alert">
+            <span class="toggle-knob"></span>
+          </button>
+        </div>
+
+        <!-- Hidden editing id -->
+        <input type="hidden" id="editing-id" value="" />
+
+        <!-- Submit -->
+        <button type="submit" id="btn-create-task" class="cta-btn">
+          <span id="cta-label">Create Task</span>
+        </button>
+
+      </form>
+    </aside>
+
+  </div><!-- .app-layout -->
+
+  <!-- Mobile FAB -->
+  <button id="fab-mobile" class="fab" aria-label="Add new task" title="Add new task">
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+  </button>
+
+  <!-- Mobile bottom nav -->
+  <nav class="bottom-nav" aria-label="Mobile navigation">
+    <button class="bottom-tab bottom-tab--active" data-tab="tasks" aria-label="Tasks" aria-current="page">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h11"/></svg>
+      <span>Tasks</span>
+    </button>
+    <button class="bottom-tab" data-tab="stats" aria-label="Statistics">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg>
+      <span>Stats</span>
+    </button>
+    <button class="bottom-tab" id="theme-toggle-mobile" aria-label="Toggle theme">
+      <span class="theme-icon theme-icon--light">☀️</span>
+      <span class="theme-icon theme-icon--dark">🌙</span>
+      <span>Theme</span>
+    </button>
+  </nav>
+
+  <!-- Overlay for mobile create panel -->
+  <div class="overlay" id="overlay" aria-hidden="true"></div>
+
+  <!-- Toast notification -->
+  <div class="toast" id="toast" role="status" aria-live="polite" aria-atomic="true"></div>
+
+  <script src="app.js"></script>
+</body>
+</html>

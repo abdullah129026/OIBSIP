@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Temperature Converter</title>
+    <meta name="description" content="A sleek, interactive tool to convert temperatures between Celsius, Fahrenheit, and Kelvin.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main class="converter-container">
+        <header>
+            <h1>Temperature Converter</h1>
+            <p>Convert seamlessly across units</p>
+        </header>
+
+        <section class="input-section">
+            <div class="input-group">
+                <input type="number" id="temp-input" placeholder="Enter value..." step="any" required>
+                <div class="select-wrapper">
+                    <select id="unit-select" aria-label="Select Input Unit">
+                        <option value="celsius">Celsius (°C)</option>
+                        <option value="fahrenheit">Fahrenheit (°F)</option>
+                        <option value="kelvin">Kelvin (K)</option>
+                    </select>
+                </div>
+            </div>
+            <div id="error-message" class="error-message hidden" aria-live="polite"></div>
+            <button id="convert-btn" class="primary-btn">Convert</button>
+        </section>
+
+        <section id="results-section" class="results-section hidden" aria-live="polite">
+            <h2>Results</h2>
+            <div class="results-grid">
+                <div class="result-card" id="result-1">
+                    <span class="result-label"></span>
+                    <span class="result-value"></span>
+                </div>
+                <div class="result-card" id="result-2">
+                    <span class="result-label"></span>
+                    <span class="result-value"></span>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>

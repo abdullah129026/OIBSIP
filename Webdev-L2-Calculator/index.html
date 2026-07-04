@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modern Calculator</title>
+    <!-- Google Fonts: Inter for tabular-nums and premium look -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="calculator-container">
+        <!-- Floating blue circle behind the card -->
+        <div class="backdrop-circle"></div>
+
+        <!-- Floating Mode Selector -->
+        <div class="theme-switch-container">
+            <button id="theme-toggle" class="theme-toggle-btn" aria-label="Toggle light and dark mode">
+                <span class="theme-icon light-icon">☀️</span>
+                <span class="theme-label">Light</span>
+                <span class="theme-divider">/</span>
+                <span class="theme-label">Dark</span>
+                <span class="theme-icon dark-icon">🌙</span>
+                <span class="toggle-slider"></span>
+            </button>
+        </div>
+
+        <!-- Calculator Card -->
+        <div class="calculator-card" id="calculator">
+            <!-- Display -->
+            <div class="calculator-display">
+                <div class="expression-line" id="expression" aria-live="polite"></div>
+                <div class="result-line" id="result" aria-live="polite">0</div>
+            </div>
+
+            <!-- Keys Grid -->
+            <div class="keys-grid" id="keys-grid">
+                <!-- Buttons will be dynamically updated/styled based on light/dark mode -->
+                <!-- We will define all buttons in HTML. We can use JS or CSS classes to adjust labels and layouts -->
+                
+                <!-- Function Row (Row 1) -->
+                <button class="key key-fn" id="key-fn1" data-val="clear">AC</button>
+                <button class="key key-fn" id="key-fn2" data-val="pm">±</button>
+                <button class="key key-fn" id="key-fn3" data-val="percent">%</button>
+                <button class="key key-fn" id="key-fn4" data-val="backspace">⌫</button>
+
+                <!-- Numeric & Operators Row 2 -->
+                <button class="key key-num" data-val="7">7</button>
+                <button class="key key-num" data-val="8">8</button>
+                <button class="key key-num" data-val="9">9</button>
+                <button class="key key-op" data-val="/">÷</button>
+
+                <!-- Numeric & Operators Row 3 -->
+                <button class="key key-num" data-val="4">4</button>
+                <button class="key key-num" data-val="5">5</button>
+                <button class="key key-num" data-val="6">6</button>
+                <button class="key key-op" data-val="*">×</button>
+
+                <!-- Numeric & Operators Row 4 -->
+                <button class="key key-num" data-val="1">1</button>
+                <button class="key key-num" data-val="2">2</button>
+                <button class="key key-num" data-val="3">3</button>
+                <button class="key key-op" data-val="-">−</button>
+
+                <!-- Numeric & Operators Row 5 -->
+                <button class="key key-num" data-val="0">0</button>
+                <button class="key key-num" data-val=".">.</button>
+                <button class="key key-op" data-val="+">+</button>
+                <button class="key key-equals" data-val="=">=</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
