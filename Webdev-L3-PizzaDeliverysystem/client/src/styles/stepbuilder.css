@@ -1,0 +1,164 @@
+/* StepBuilder — 4-step wizard shell. Tokens only (ui-tokens.md). */
+
+.stepbuilder {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}
+
+/* Stepper header */
+.stepbuilder-steps {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  list-style: none;
+  flex-wrap: wrap;
+}
+
+.stepbuilder-step {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 8px 16px;
+  border-radius: var(--radius-pill);
+  border: 1px solid var(--color-border);
+  background: var(--color-white);
+  color: var(--color-text-muted);
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.stepbuilder-step.active {
+  border-color: var(--color-primary);
+  color: var(--color-primary);
+  background: var(--color-primary-soft);
+}
+
+.stepbuilder-step.done {
+  border-color: var(--color-leaf-green);
+  color: var(--color-leaf-green);
+}
+
+.stepbuilder-step-num {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background: var(--color-cream);
+  font-size: 12px;
+}
+
+.stepbuilder-step.active .stepbuilder-step-num {
+  background: var(--color-primary);
+  color: var(--color-white);
+}
+
+.stepbuilder-step.done .stepbuilder-step-num {
+  background: var(--color-leaf-green);
+  color: var(--color-white);
+}
+
+/* Panel */
+.stepbuilder-head {
+  text-align: center;
+  margin-bottom: 24px;
+}
+
+.stepbuilder-title {
+  font-family: var(--font-heading-sans);
+  font-size: 28px;
+}
+
+.stepbuilder-hint {
+  margin-top: 4px;
+}
+
+.stepbuilder-options {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: var(--grid-gap);
+}
+
+.stepbuilder-option {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  padding: 20px 16px;
+  border-radius: var(--radius-card);
+  border: 1px solid var(--color-border);
+  background: var(--color-card-cream);
+  color: var(--color-text);
+  text-align: center;
+  transition: border-color 0.15s ease, transform 0.1s ease;
+}
+
+.stepbuilder-option:hover {
+  border-color: var(--color-primary);
+  transform: translateY(-2px);
+}
+
+.stepbuilder-option.selected {
+  border-color: var(--color-primary);
+  box-shadow: 0 0 0 2px var(--color-primary);
+}
+
+.stepbuilder-option-emoji {
+  font-size: 34px;
+  line-height: 1;
+}
+
+.stepbuilder-option-name {
+  font-weight: 600;
+  font-size: 15px;
+}
+
+.stepbuilder-option-price {
+  font-size: 14px;
+}
+
+/* Footer */
+.stepbuilder-foot {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  flex-wrap: wrap;
+  padding: 20px 24px;
+  border-radius: var(--radius-card);
+  background: var(--color-white);
+  border: 1px solid var(--color-border);
+  box-shadow: var(--shadow);
+}
+
+.stepbuilder-total {
+  display: flex;
+  flex-direction: column;
+}
+
+.stepbuilder-total-value {
+  font-size: 24px;
+}
+
+.stepbuilder-actions {
+  display: flex;
+  gap: 12px;
+}
+
+.btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+@media (max-width: 640px) {
+  .stepbuilder-foot {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .stepbuilder-actions {
+    justify-content: flex-end;
+  }
+}

@@ -1,0 +1,22 @@
+.page-placeholder {
+  min-height: 60vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  text-align: center;
+}
+
+.page-placeholder h1 {
+  font-size: 40px;
+}
+
+.page-placeholder p {
+  color: var(--color-text-muted);
+  max-width: 480px;
+}
+
+.page-hero-spacer {
+  height: 96px;
+}

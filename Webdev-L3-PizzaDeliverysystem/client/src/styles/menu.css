@@ -1,0 +1,164 @@
+.menu-page {
+  padding-bottom: 80px;
+}
+
+.menu-hero {
+  background-color: var(--color-cream);
+  padding: 120px 0 64px; /* extra top padding for navbar */
+  text-align: center;
+}
+
+.menu-eyebrow {
+  color: var(--color-text-muted);
+  font-family: var(--font-body);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 14px;
+  margin-bottom: 16px;
+}
+
+.menu-heading {
+  font-family: var(--font-heading-sans);
+  font-size: clamp(40px, 5vw, 64px);
+  color: var(--color-primary);
+  font-weight: 700;
+  margin-bottom: 24px;
+  line-height: 1.1;
+}
+
+.menu-sub {
+  font-size: 18px;
+  max-width: 600px;
+  margin: 0 auto 40px;
+  line-height: 1.6;
+}
+
+.menu-tabs {
+  display: inline-flex;
+  background-color: var(--color-white);
+  padding: 8px;
+  border-radius: var(--radius-pill);
+  gap: 8px;
+  box-shadow: var(--shadow);
+}
+
+.menu-tab {
+  border: none;
+  background: transparent;
+  padding: 12px 24px;
+  border-radius: var(--radius-pill);
+  color: var(--color-text);
+  font-family: var(--font-heading-sans);
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.menu-tab:hover {
+  background-color: var(--color-primary-soft);
+  color: var(--color-primary);
+}
+
+.menu-tab.active {
+  background-color: var(--color-primary);
+  color: var(--color-white);
+}
+
+/* Sections */
+.menu-alt {
+  background-color: var(--color-cream);
+}
+
+.menu-section-title {
+  font-family: var(--font-heading-sans);
+  font-size: 40px;
+  color: var(--color-primary);
+  text-align: center;
+  margin-bottom: 12px;
+}
+
+.menu-section-sub {
+  text-align: center;
+  margin-bottom: 48px;
+}
+
+/* Grids */
+.menu-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 32px;
+}
+
+.menu-sides-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 24px;
+}
+
+/* Side Item Card */
+.menu-side {
+  display: flex;
+  flex-direction: column;
+}
+
+.menu-side-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.menu-side-name {
+  font-family: var(--font-heading-sans);
+  font-size: 20px;
+  color: var(--color-text);
+  margin: 0;
+}
+
+.menu-side-desc {
+  flex-grow: 1;
+  margin-bottom: 24px;
+  line-height: 1.5;
+}
+
+.menu-side-foot {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: auto;
+}
+
+.menu-side-btn {
+  padding: 8px 24px;
+}
+
+/* CTA Section */
+.menu-cta-section {
+  padding-top: 80px;
+}
+
+.menu-cta {
+  text-align: center;
+  background-color: var(--color-card-cream);
+  border-color: var(--color-primary);
+  padding: 64px 32px;
+}
+
+.menu-cta-title {
+  font-family: var(--font-heading-serif);
+  font-size: 40px;
+  color: var(--color-primary);
+  margin-bottom: 16px;
+}
+
+.menu-cta p {
+  margin-bottom: 32px;
+}
+
+@media (max-width: 768px) {
+  .menu-tabs {
+    flex-wrap: wrap;
+    justify-content: center;
+    border-radius: var(--radius-card);
+  }
+}

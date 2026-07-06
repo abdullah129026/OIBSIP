@@ -1,0 +1,96 @@
+.footer {
+  background: var(--color-primary);
+  color: var(--color-white);
+}
+
+.footer a {
+  color: var(--color-white);
+  opacity: 0.9;
+}
+
+.footer a:hover {
+  opacity: 1;
+}
+
+/* Variant A — big brand */
+.footer-a .footer-grid {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr 1fr 1.4fr;
+  gap: var(--grid-gap);
+  padding-block: var(--section-pad-y);
+}
+
+.footer-wordmark {
+  font-family: var(--font-heading-sans);
+  font-weight: 700;
+  font-size: 32px;
+  background: var(--gradient-gold-btn);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.footer-tagline {
+  margin-top: 8px;
+  opacity: 0.9;
+  font-size: 14px;
+}
+
+.footer-col h4 {
+  color: var(--color-white);
+  font-size: 16px;
+  margin-bottom: 14px;
+}
+
+.footer-col ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  font-size: 14px;
+}
+
+.footer-newsletter {
+  display: flex;
+  gap: 8px;
+  margin-top: 12px;
+}
+
+.footer-bottom {
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  padding-block: 18px;
+  font-size: 13px;
+  text-align: center;
+  opacity: 0.9;
+}
+
+/* Variant B — compact strip */
+.footer-b .footer-strip {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding-block: 28px;
+  flex-wrap: wrap;
+}
+
+.footer-b .footer-wordmark {
+  font-size: 24px;
+}
+
+.footer-social {
+  display: flex;
+  gap: 12px;
+}
+
+@media (max-width: 900px) {
+  .footer-a .footer-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 560px) {
+  .footer-a .footer-grid {
+    grid-template-columns: 1fr;
+  }
+}

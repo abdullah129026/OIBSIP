@@ -1,0 +1,124 @@
+/* Dashboard page. Tokens only. */
+
+.dashboard-hero {
+  background: var(--color-cream);
+  padding-block: 48px 8px;
+}
+
+.dashboard-hero-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+
+.dashboard-eyebrow {
+  color: var(--color-primary);
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.dashboard-heading {
+  font-family: var(--font-heading-sans);
+  font-size: 40px;
+  margin-top: 4px;
+}
+
+.dashboard-sub {
+  margin-top: 8px;
+  max-width: 520px;
+}
+
+.dashboard-section-head {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 16px;
+  flex-wrap: wrap;
+  margin-bottom: 24px;
+}
+
+.dashboard-section-title {
+  font-family: var(--font-heading-sans);
+  font-size: 30px;
+}
+
+/* Orders */
+.dashboard-orders {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.dashboard-order {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  flex-wrap: wrap;
+  padding: 20px 24px;
+}
+
+.dashboard-order-main {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.dashboard-order-id {
+  font-weight: 700;
+  color: var(--color-primary);
+  font-family: var(--font-heading-sans);
+}
+
+.dashboard-order-items {
+  font-weight: 600;
+}
+
+.dashboard-order-placed {
+  font-size: 14px;
+}
+
+.dashboard-order-side {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+
+.dashboard-order-total {
+  font-size: 20px;
+}
+
+/* Empty state */
+.dashboard-empty {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  text-align: center;
+  padding: 48px 24px;
+}
+
+/* Menu grid */
+.dashboard-menu-section {
+  background: var(--color-cream);
+}
+
+.dashboard-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: var(--grid-gap);
+  row-gap: 64px;
+  padding-top: 40px;
+}
+
+@media (max-width: 640px) {
+  .dashboard-heading {
+    font-size: 30px;
+  }
+  .dashboard-order-side {
+    width: 100%;
+    justify-content: space-between;
+  }
+}

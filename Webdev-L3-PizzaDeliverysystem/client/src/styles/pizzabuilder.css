@@ -1,0 +1,41 @@
+/* PizzaBuilder page. Tokens only. */
+
+.builder-hero {
+  text-align: center;
+  padding-block: 56px 24px;
+  background: var(--color-cream);
+}
+
+.builder-eyebrow {
+  color: var(--color-primary);
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  font-size: 14px;
+}
+
+.builder-heading {
+  font-family: var(--font-heading-sans);
+  font-size: 44px;
+  margin-top: 8px;
+}
+
+.builder-sub {
+  max-width: 620px;
+  margin: 12px auto 0;
+}
+
+.builder-section {
+  padding-top: 24px;
+}
+
+.builder-state {
+  text-align: center;
+  padding: 48px 24px;
+}
+
+@media (max-width: 640px) {
+  .builder-heading {
+    font-size: 32px;
+  }
+}

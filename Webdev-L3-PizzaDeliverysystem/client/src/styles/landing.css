@@ -1,0 +1,575 @@
+/* Landing (PizzaCrave) — section styles. Tokens only, never hardcode hex.
+   All maroon/dark-red in the mockups renders as --color-primary (warm orange). */
+
+.section-title {
+  text-align: center;
+  font-size: 46px;
+  font-weight: 700;
+  color: var(--color-primary);
+}
+
+.stars {
+  color: var(--color-star);
+  letter-spacing: 1px;
+  font-size: 14px;
+}
+
+.stars-empty {
+  color: var(--color-border);
+}
+
+/* ---------- Hero ---------- */
+.hero {
+  position: relative;
+  min-height: 640px;
+  display: flex;
+  align-items: center;
+  padding-top: 96px;
+  background:
+    linear-gradient(180deg, rgba(255, 152, 0, 0.12), rgba(251, 246, 236, 0.6)),
+    radial-gradient(circle at 70% 40%, var(--color-primary-soft), var(--color-cream));
+  overflow: hidden;
+}
+
+.hero-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+  width: 100%;
+}
+
+.hero-copy {
+  max-width: 560px;
+}
+
+.hero-title {
+  font-family: var(--font-heading-sans);
+  font-size: 60px;
+  font-weight: 700;
+  color: var(--color-primary);
+  line-height: 1.05;
+}
+
+.hero-sub {
+  margin-top: 16px;
+  font-size: 18px;
+  color: var(--color-text);
+}
+
+.hero-actions {
+  display: flex;
+  gap: 16px;
+  margin-top: 28px;
+}
+
+.hero-minis {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+  width: 380px;
+}
+
+.hero-mini {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: var(--color-white);
+  border: 1px solid var(--color-primary);
+  border-radius: var(--radius-pill);
+  padding: 8px 14px 8px 8px;
+  box-shadow: var(--shadow);
+}
+
+.hero-mini-img {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+.hero-mini-name {
+  font-family: var(--font-heading-sans);
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--color-text);
+}
+
+.hero-mini-price {
+  font-size: 15px;
+}
+
+/* ---------- Today's Best Deals ---------- */
+.deals-banner {
+  position: relative;
+  border-radius: var(--radius);
+  background: var(--gradient-deals-banner);
+  padding: 40px;
+  overflow: hidden;
+  color: var(--color-white);
+}
+
+.deals-title {
+  color: var(--color-white);
+  font-size: 40px;
+}
+
+.deals-limited {
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.deals-hurry {
+  margin-top: 8px;
+  font-style: italic;
+  font-size: 17px;
+}
+
+.deals-offers {
+  margin-top: 28px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  max-width: 620px;
+}
+
+.deals-offer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  background: var(--gradient-offer-bar);
+  border-radius: var(--radius-btn);
+  padding: 14px 18px;
+}
+
+.deals-offer-text {
+  font-family: var(--font-heading-sans);
+  font-weight: 500;
+  font-size: 17px;
+}
+
+.deals-price {
+  font-size: 26px;
+  font-weight: 700;
+  margin-left: 8px;
+}
+
+.deals-offer-btn {
+  background: var(--color-white);
+  color: var(--color-primary);
+  padding: 9px 22px;
+  flex-shrink: 0;
+}
+
+.deals-decor {
+  position: absolute;
+  right: 24px;
+  top: 0;
+  bottom: 0;
+  width: 320px;
+  pointer-events: none;
+}
+
+.deals-decor-img {
+  position: absolute;
+  object-fit: contain;
+  filter: drop-shadow(0 8px 16px rgba(0, 0, 0, 0.25));
+}
+
+.deals-decor-pizza {
+  width: 190px;
+  height: 190px;
+  border-radius: 50%;
+  object-fit: cover;
+  right: 70px;
+  top: 50%;
+  transform: translateY(-50%);
+  border: 4px solid var(--color-white);
+}
+
+.deals-decor-drink1 {
+  width: 110px;
+  right: 200px;
+  top: 6px;
+}
+
+.deals-decor-drink2 {
+  width: 90px;
+  right: 0;
+  top: 30px;
+}
+
+.deals-decor-ketchup {
+  width: 84px;
+  right: 150px;
+  bottom: 8px;
+}
+
+.deals-decor-sauce {
+  width: 60px;
+  right: 30px;
+  bottom: 0;
+}
+
+/* ---------- Customer Favorites ---------- */
+.favorites-section {
+  background: var(--color-cream);
+}
+
+.favorites-title {
+  margin-bottom: 56px;
+}
+
+.favorites-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: var(--grid-gap);
+}
+
+.favorites-cta {
+  display: flex;
+  justify-content: center;
+  margin-top: 48px;
+}
+
+/* ---------- Welcome to the Future ---------- */
+.future-section {
+  background: var(--color-cream);
+}
+
+.future-inner {
+  text-align: center;
+}
+
+.future-title {
+  font-size: 48px;
+}
+
+.future-sub {
+  font-size: 18px;
+  margin-top: 12px;
+}
+
+.future-stage {
+  position: relative;
+  margin-top: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+}
+
+.future-pizza {
+  width: 280px;
+  height: 280px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 4px solid var(--color-white);
+  box-shadow: var(--shadow);
+}
+
+.future-btn {
+  margin-top: -60px;
+}
+
+/* ---------- Our Regular Flavoures ---------- */
+.flavours-title {
+  font-size: 52px;
+}
+
+.flavours-sub {
+  text-align: center;
+  max-width: 620px;
+  margin: 12px auto 48px;
+  font-size: 16px;
+}
+
+.flavours-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: var(--grid-gap);
+}
+
+.flavour-card {
+  text-align: center;
+}
+
+.flavour-media {
+  position: relative;
+  width: 200px;
+  max-width: 100%;
+  aspect-ratio: 1;
+  margin: 0 auto 16px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.flavour-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.flavour-name {
+  font-family: var(--font-heading-sans);
+  font-weight: 600;
+  font-size: 18px;
+  color: var(--color-primary);
+  margin-bottom: 8px;
+}
+
+.flavour-desc {
+  font-size: 14px;
+  min-height: 60px;
+}
+
+.flavour-foot {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  margin-top: 12px;
+}
+
+.flavour-price {
+  font-size: 18px;
+}
+
+.flavour-btn {
+  padding: 7px 18px;
+  font-size: 14px;
+}
+
+.flavours-cta {
+  display: flex;
+  justify-content: center;
+  margin-top: 48px;
+}
+
+/* ---------- Made with Love ---------- */
+.love-section {
+  background: var(--color-cream);
+}
+
+.love-inner {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 48px;
+  align-items: center;
+}
+
+.love-copy {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.love-title {
+  text-align: left;
+  font-size: 44px;
+}
+
+.love-btn {
+  align-self: flex-start;
+  margin-top: 8px;
+}
+
+.love-media {
+  display: flex;
+  justify-content: center;
+}
+
+.love-img {
+  width: 100%;
+  max-width: 440px;
+  aspect-ratio: 1;
+  border-radius: var(--radius);
+  object-fit: cover;
+  border: 8px solid var(--color-gold);
+  box-shadow: var(--shadow);
+}
+
+/* ---------- From Our Oven ---------- */
+.oven-title {
+  margin-bottom: 40px;
+}
+
+.oven-inner {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  gap: 40px;
+  align-items: center;
+}
+
+.oven-features {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+}
+
+.oven-feature {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  font-family: var(--font-heading-sans);
+  font-size: 20px;
+  font-weight: 500;
+  color: var(--color-text);
+}
+
+.oven-feature-icon {
+  font-size: 24px;
+  color: var(--color-primary);
+}
+
+.oven-illus {
+  font-size: 140px;
+  text-align: center;
+}
+
+.oven-copy {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 20px;
+  text-align: right;
+}
+
+.oven-copy .text-muted {
+  font-size: 16px;
+}
+
+/* ---------- Testimonials ---------- */
+.testimonials-title {
+  font-size: 52px;
+  margin-bottom: 48px;
+}
+
+.testimonials-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: var(--grid-gap);
+}
+
+.testimonial-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.testimonial-quote-mark {
+  position: absolute;
+  top: 12px;
+  right: 18px;
+  font-size: 44px;
+  line-height: 1;
+  color: var(--color-primary);
+  font-family: var(--font-heading-serif);
+}
+
+.testimonial-head {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.testimonial-avatar {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid var(--color-gold);
+  flex-shrink: 0;
+}
+
+.testimonial-name {
+  font-family: var(--font-heading-sans);
+  font-weight: 600;
+  color: var(--color-text);
+}
+
+.testimonial-quote {
+  font-size: 14px;
+  line-height: 1.55;
+}
+
+/* ---------- Responsive ---------- */
+@media (max-width: 900px) {
+  .section-title {
+    font-size: 34px;
+  }
+
+  .hero {
+    padding-top: 110px;
+    text-align: center;
+  }
+
+  .hero-inner {
+    flex-direction: column;
+  }
+
+  .hero-title {
+    font-size: 42px;
+  }
+
+  .hero-actions {
+    justify-content: center;
+  }
+
+  .hero-minis {
+    width: 100%;
+  }
+
+  .deals-decor {
+    display: none;
+  }
+
+  .favorites-grid,
+  .flavours-grid,
+  .testimonials-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .love-inner,
+  .oven-inner {
+    grid-template-columns: 1fr;
+  }
+
+  .love-title {
+    text-align: center;
+  }
+
+  .love-btn {
+    align-self: center;
+  }
+
+  .oven-copy {
+    align-items: center;
+    text-align: center;
+  }
+
+  .oven-features {
+    align-items: center;
+  }
+}
+
+@media (max-width: 560px) {
+  .hero-minis {
+    grid-template-columns: 1fr;
+  }
+
+  .favorites-grid,
+  .flavours-grid,
+  .testimonials-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .deals-offer {
+    flex-direction: column;
+    align-items: stretch;
+  }
+}

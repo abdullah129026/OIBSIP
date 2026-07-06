@@ -1,0 +1,95 @@
+.admin-page {
+  max-width: 1140px;
+  margin: 0 auto;
+  padding: 80px 24px;
+}
+
+.admin-header {
+  margin-bottom: 48px;
+}
+
+.admin-header h1 {
+  font-family: var(--font-heading-sans);
+  font-size: 40px;
+  color: var(--color-primary);
+  margin-bottom: 8px;
+}
+
+.admin-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.admin-card {
+  background: var(--color-white);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-card);
+  box-shadow: var(--shadow);
+  padding: 32px;
+  overflow-x: auto;
+}
+
+.admin-card h2 {
+  font-family: var(--font-heading-sans);
+  font-size: 24px;
+  color: var(--color-text);
+  margin-bottom: 24px;
+  text-transform: capitalize;
+}
+
+.admin-table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 600px;
+}
+
+.admin-table th {
+  text-align: left;
+  font-family: var(--font-heading-sans);
+  font-weight: 600;
+  color: var(--color-text-muted);
+  padding-bottom: 16px;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.admin-table td {
+  padding: 16px 0;
+  border-bottom: 1px solid var(--color-border);
+  color: var(--color-text);
+  vertical-align: middle;
+}
+
+.admin-table tr:last-child td {
+  border-bottom: none;
+}
+
+.admin-input {
+  width: 100px;
+  background: var(--color-white);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-btn);
+  padding: 8px 12px;
+  font-family: var(--font-body);
+  color: var(--color-text);
+}
+
+.admin-input:focus {
+  border-color: var(--color-primary);
+  outline: none;
+}
+
+.admin-actions {
+  display: flex;
+  gap: 12px;
+}
+
+.admin-badge-low {
+  background: var(--color-primary-soft);
+  color: var(--color-primary);
+  padding: 4px 12px;
+  border-radius: var(--radius-pill);
+  font-size: 12px;
+  font-weight: 600;
+  display: inline-block;
+}

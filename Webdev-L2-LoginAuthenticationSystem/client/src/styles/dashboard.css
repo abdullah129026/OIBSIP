@@ -1,0 +1,113 @@
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 68px;
+  padding: 0 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 10;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 16px;
+  font-weight: 500;
+  color: var(--text-primary);
+}
+
+.brand-mark {
+  width: 20px;
+  height: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 6px;
+  background: var(--text-primary);
+  color: #ffffff;
+}
+
+.btn-logout {
+  height: 38px;
+  padding: 0 16px;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--text-primary);
+  background: var(--social-bg);
+  border: 1px solid var(--social-border);
+  border-radius: var(--radius-input);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.07);
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.btn-logout:hover {
+  background: rgba(255, 255, 255, 0.95);
+  transform: translateY(-1px);
+}
+
+.dashboard-layout {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 88px 24px 24px;
+}
+
+.dashboard-card {
+  position: relative;
+  z-index: 1;
+  width: 440px;
+  max-width: 92vw;
+  padding: 40px 36px;
+  border-radius: var(--radius-card);
+  background: var(--glass-bg);
+  backdrop-filter: blur(18px) saturate(160%);
+  -webkit-backdrop-filter: blur(18px) saturate(160%);
+  border: 1px solid var(--glass-border);
+  box-shadow: 0 8px 40px rgba(100, 160, 200, 0.18), 0 2px 8px rgba(0, 0, 0, 0.06);
+}
+
+.dashboard-greeting {
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.dashboard-subtitle {
+  margin-top: 8px;
+  font-size: 13.5px;
+  color: var(--text-secondary);
+}
+
+.dashboard-info {
+  margin-top: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.dashboard-info-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 14px;
+  background: var(--input-bg);
+  border: 1px solid var(--input-border);
+  border-radius: var(--radius-input);
+}
+
+.dashboard-info-label {
+  font-size: 12.5px;
+  color: var(--text-muted);
+}
+
+.dashboard-info-value {
+  font-size: 13.5px;
+  font-weight: 600;
+  color: var(--text-body);
+}

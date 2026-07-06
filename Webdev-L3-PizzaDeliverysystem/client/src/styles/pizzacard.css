@@ -1,0 +1,88 @@
+/* PizzaCard — canonical product card (Customer Favorites, Dashboard).
+   Round pizza image overlaps the top edge; leaf badge top-left; rating, price, Order pill. */
+
+.pizzacard {
+  position: relative;
+  margin-top: 64px;
+  background: var(--color-card-cream);
+  border: 2px solid var(--color-primary);
+  border-radius: var(--radius-card);
+  box-shadow: var(--shadow);
+  padding: 76px 24px 24px;
+  text-align: center;
+}
+
+.pizzacard-media {
+  position: absolute;
+  top: -64px;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+}
+
+.pizzacard-image {
+  width: 128px;
+  height: 128px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid var(--color-white);
+  box-shadow: var(--shadow);
+}
+
+.pizzacard-badge {
+  position: absolute;
+  top: 68px;
+  left: 12px;
+  font-size: 11px;
+  padding: 4px 8px;
+}
+
+.pizzacard-title {
+  font-family: var(--font-heading-sans);
+  font-size: 22px;
+  font-weight: 600;
+  color: var(--color-text);
+  margin-bottom: 8px;
+}
+
+.pizzacard-rating {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  font-size: 14px;
+  margin-bottom: 12px;
+}
+
+.pizzacard-stars {
+  color: var(--color-star);
+  letter-spacing: 1px;
+}
+
+.pizzacard-stars-empty {
+  color: var(--color-border);
+}
+
+.pizzacard-desc {
+  font-size: 14px;
+  line-height: 1.5;
+  margin-bottom: 20px;
+  min-height: 42px;
+}
+
+.pizzacard-foot {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.pizzacard-price {
+  font-size: 22px;
+}
+
+.pizzacard-btn {
+  padding: 9px 20px;
+  font-size: 14px;
+}

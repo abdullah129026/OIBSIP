@@ -1,0 +1,25 @@
+/* StatusBadge — order state pill. Tokens per ui-rules.md Order Status Badge. */
+
+.status-badge {
+  white-space: nowrap;
+}
+
+.status-badge--received {
+  background: var(--color-primary-soft);
+  color: var(--color-primary);
+}
+
+.status-badge--in_kitchen {
+  background: var(--color-gold-light);
+  color: var(--color-text);
+}
+
+.status-badge--out_for_delivery {
+  background: var(--color-primary);
+  color: var(--color-white);
+}
+
+.status-badge--delivered {
+  background: var(--color-leaf-green);
+  color: var(--color-white);
+}
