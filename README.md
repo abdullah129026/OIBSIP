@@ -1,54 +1,5 @@
-﻿# OIBSIP Landing Page
+﻿# OIBSIP Internship tasks
 
-A polished single-page landing page built for the OIBSIP Web Development Level 1 task. The design is inspired by the Pulze.io marketing site and includes a glassy header, animated hero, product cards, blog section, and footer state changes.
 
-## Features
 
-- Sticky transparent header with dropdown menus
-- Pulze-style hero section with soft gradients and animated audience text
-- Trusted-by marquee and stats row
-- Product cards with icons
-- Scroll-triggered reveal animations
-- Local image-based blog cards
-- Dark footer with background transition on scroll
-- Responsive layout for mobile and desktop
 
-## Tech Stack
-
-- HTML5
-- CSS3
-- Vanilla JavaScript
-
-## Project Structure
-
-- `Webdev-L1-LandingPage/index.html` - Main markup and inline behavior
-- `Webdev-L1-LandingPage/styles.css` - All styling and responsive rules
-- `Webdev-L1-LandingPage/3d workflow.mp4` - Showcase video
-- `Webdev-L1-LandingPage/building .mp4` - About section video
-- `Webdev-L1-LandingPage/design software.mp4` - Extra local video asset
-- `Webdev-L1-LandingPage/Event.jpg` - Blog image asset
-- `Webdev-L1-LandingPage/Artwork.jpg` - Blog image asset
-- `Webdev-L1-LandingPage/Conference presentation.jpg` - Blog image asset
-
-## How To Run
-
-1. Open `Webdev-L1-LandingPage/index.html` in a browser.
-2. Or serve the folder with a local server for the best experience.
-
-Example:
-
-```bash
-python -m http.server
-```
-
-Then open the local address shown in the terminal.
-
-## Notes
-
-- The page uses local media assets, so keep the files in the same folder as `index.html`.
-- The header and footer have scroll-based visual states to better match the Pulze-style reference.
-- Dropdown icons and scroll animations are implemented with inline SVG and vanilla JS.
-
-## Preview
-
-The site is intended to closely match the provided Pulze-inspired reference while keeping the content branded as Essence.
