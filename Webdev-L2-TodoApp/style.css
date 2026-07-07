@@ -1,14 +1,8 @@
-/* ═══════════════════════════════════════════════════════════
-   TASKFLOW — style.css
-   Design tokens → design.md §1 | Layout → design.md §4
-═══════════════════════════════════════════════════════════ */
 
-/* ── Google Font preload ── */
+
+
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
 
-/* ══════════════════════════════════════
-   1. DESIGN TOKENS
-══════════════════════════════════════ */
 :root {
   /* Accent — identical in both modes */
   --accent-start: #F58B7C;
@@ -80,9 +74,7 @@
   --shadow-card:          0 4px 20px rgba(0, 0, 0, 0.30);
 }
 
-/* ══════════════════════════════════════
-   2. RESET & BASE
-══════════════════════════════════════ */
+
 *, *::before, *::after {
   box-sizing: border-box;
   margin: 0;

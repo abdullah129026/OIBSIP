@@ -1,8 +1,6 @@
 /* =============================================
    MUHAMMAD ALI TRIBUTE PAGE — CSS
-   Color palette: Deep black, crimson red,
-   championship gold, warm white
-   ============================================= */
+   ========================================== */
 
 *,
 *::before,
@@ -11,7 +9,6 @@
   margin: 0;
   padding: 0;
 }
-
 :root {
   --black: #0d0d0d;
   --charcoal: #1a1a1a;

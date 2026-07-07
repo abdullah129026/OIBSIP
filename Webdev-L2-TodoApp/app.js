@@ -1,8 +1,5 @@
-/* ═══════════════════════════════════════════════════════════
-   TASKFLOW — app.js
-   Full vanilla JS: state management, CRUD, localStorage,
-   inline editing, theme toggling, animations, rendering.
-═══════════════════════════════════════════════════════════ */
+
+
 
 'use strict';
 
